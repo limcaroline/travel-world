@@ -1,0 +1,26 @@
+/* Global Styles */
+body {
+  background-color: white;
+  font-family: "Lunasima", sans-serif;
+  color: #b16f37;
+  margin: 0;
+  padding-top: 0px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("assets/images/background.webp");
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  color: white;
+
+}
+
+.hero-overlay {
+  top: 20%;
+  left: 50%;
+  width: 90%;
+  padding: 20px;
+}
+
