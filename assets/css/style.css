@@ -1,26 +1,99 @@
+
+/* CSS Variables */
+:root {
+    --primary-font: "Lumasima", sans-serif;
+    --secondary-font: "Lexend Deca", cursive;
+    --tertiary-font: "Madimi One", cursive;
+    --main-dark-color: #b16f37; /* bronze */
+    --sub-light-color: #5f3c3a; /* dark brown */
+    --alternate-dark-color: #446494; /* dark blue */
+    --alternate-light-color: #afbfe2; /*light blue */
+}
+
 /* Global Styles */
 body {
-  background-color: white;
   font-family: "Lunasima", sans-serif;
   color: #b16f37;
   margin: 0;
   padding-top: 0px;
+  text-align: center;
+}
+
+.sub-color {
+  color: var(--sub-color);
 }
 
 /* Hero Section */
 .hero {
-  background-image: url("assets/images/background.webp");
+  background-image: url("../images/background.webp");
   background-size: cover;
   background-position: center;
   height: 400px;
-  color: white;
+  position: relative;
+  padding-bottom: 70px;
+
+
+}
+
+.hero p {
+  padding-top: 0px;
+
 
 }
 
 .hero-overlay {
+  position: relative;
   top: 20%;
   left: 50%;
+  transform: translateX(-50%);
   width: 90%;
+  background-color: rgba(255, 255, 255, 0.77);
   padding: 20px;
+  border-radius: 10px;
 }
+
+.card-bg {
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-overlay {
+  position: relative;
+  top: 20%;
+  left: 20%;
+  transform: translateX(-50%);
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.77);
+  padding: 20px;
+  
+}
+
+/* Individual card backgrounds */
+.card-bg-1 { background-image: url("../images/background.webp"); }
+.card-bg-2 { background-image: url("../images/bg2.webp"); }
+.card-bg-3 { background-image: url("../images/bg3.webp"); }
+.card-bg-4 { background-image: url("../images/bg4.webp"); }
+.card-bg-5 { background-image: url("../images/bg2.webp"); }
+.card-bg-6 { background-image: url("../images/bg3.webp"); }
+.card-bg-7 { background-image: url("../images/bg4.webp"); }
+.card-bg-8 { background-image: url("../images/bg2.webp"); }
+
+
+/* Buttons */
+.custom-button {
+    border: 1px solid var(--alternate-dark-color);
+    background-color: var(--alternate-dark-color);
+    color: white;
+    font-weight: bold;
+}
+
+.custom-button:hover {
+    border: 1px solid var(--alternate-dark-color);
+    background-color: var(--alternate-dark-color);
+    color: white;
+    font-weight: bold;
+}
+
 
