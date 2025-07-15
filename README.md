@@ -18,7 +18,7 @@
 - Future Enhancements
 - Credits
 
-### Travel World is a travel website that allows potential customers to combine stays at hotels within the Scandia Hotel Chain* with available tour packages and add-ons to create a travel package that gives convenience and accessibility to potential customers. This removes the stress of planning and coordinating so that the hotel guests can simply enjoy their time at their place of choice and make the most of their trip. 
+#### Travel World is a travel website that allows potential customers to combine stays at hotels within the Scandia Hotel Chain* with available tour packages and add-ons to create a travel package that gives convenience and accessibility to potential customers. This removes the stress of planning and coordinating so that the hotel guests can simply enjoy their time at their place of choice and make the most of their trip. 
 
 
 ##### *Note: Please note that the Scandia Hotel Chain shown in this website and project is fictional and is loosely based but not in any way affiliated with the Scandic Hotels. 
@@ -45,7 +45,7 @@
 
 ### User Stories Overview
 
-See travel-world project in the Projects page in the travel-world Github repository for complete user stories - (https://github.com/users/limcaroline/projects/6)
+See Projects page in the travel-world Github repository for complete user stories - (https://github.com/users/limcaroline/projects/6)
 
 - As a site visitor, I would like to have user-friendly navigation and design that I can easily access through different devices so I can easily find information.
 
@@ -56,7 +56,7 @@ See travel-world project in the Projects page in the travel-world Github reposit
   - Search option where the city, dates, and number of people is provided. 
   - This search option will generate results for applicable accommodation and experiences.
 
-- As a user, I want to view hotels where I could stay at.
+- As a user, I want to view hotels/accommodations where I could stay at.
   - A list of hotels for the selected city will be available with relevant details such as address, hotel description, room amenities, and price.
 
 - As a user, I want to view experience tour packages to simplify planning. 
@@ -71,20 +71,19 @@ See travel-world project in the Projects page in the travel-world Github reposit
 
 - As a user, I want to see a summary of my selection and complete my booking.
   - A booking form where users can input their details and book their selected holiday package is available.
-
-- As a user, I want to get a confirmation that my booking is successful.
   - A confirmation message is given that a booking is successful.
+
+- Good-to-have (future): As a user, I want the option to include add-ons such as a rental vehicle for convenience.
+  - A list of add-ons for the selected city will be available with relevant details such as description, price, and discount offered.
 
 
 ### Website Structure
 #### - Menu
 - Home 
   - includes Search option and highlighted travel packages
-- Accommodation
-  - includes List of hotels with relevant information and a link to the map view
-- Experience (attractions and restaurants)
-  - includes List of attractions and restaurants with relevant information and a link to the map view
-- Book
+- Map
+  - includes hotels, attractions, and restaurants with relevant information
+- Book Now!
   - includes a final selection summary and allows user to book the travel package
 
 
@@ -108,7 +107,7 @@ See travel-world project in the Projects page in the travel-world Github reposit
 
 - Interactive map powered by Google Maps and Google Places API with relevant locations pinned
 
-- Booking form 
+- Booking form and confirmation message
 
 
 
@@ -129,6 +128,7 @@ See travel-world project in the Projects page in the travel-world Github reposit
 - Google Fonts for typography https://fonts.google.com/
 - Font Awesome for icons https://fontawesome.com/
 - Favicon.io for generation of favicons https://favicon.io/
+- Bootstap Version 5.3 for styling/layout https://getbootstrap.com/
 
 
 
@@ -136,7 +136,7 @@ See travel-world project in the Projects page in the travel-world Github reposit
 ### Deployment & Local Development
 Github Repo: https://github.com/limcaroline/travel-world
 
-How to create repo in Github for deployments
+#### How to create repo in Github for deployments
 I first followed these steps from Code Institute module to create a repo in github:
 1. Log into www.github.com. Click the plus icon and select New repository.
 2. Name the repository accordingly - Note: I used travel-world.
@@ -145,6 +145,30 @@ I first followed these steps from Code Institute module to create a repo in gith
 5. In VS Code, use "Open folder" from the file menu to open your vscode-projects folder and create a new project directory.
 6. Open a new terminal, and paste in the commands copied from GitHub.
 7. You should now see the README.md file appear in the Explorer.
+
+#### How to Deploy 
+These are the steps to deploy in github that I followed, also referenced from Code Institute's module:
+
+From VSCode, commit and push all your changes to Github.
+Go to GitHub repo https://github.com/limcaroline/travel-world, select Settings, then Pages.
+Select the main branch and then Save.
+In the Code tab, select Deployments.
+On the Deployments page, refresh until the link is provided.
+Click the link to check that it is working
+
+#### How to Fork
+In Github, go to this Repository: https://github.com/limcaroline/travel-world
+Click the Fork button at the top right of this page to create your own copy of the repo.
+
+#### How to Clone
+In Github, go to this Repository: https://github.com/limcaroline/travel-world
+Click the green Code button.
+Copy the URL under "HTTPS".
+Open your terminal.
+Run this command: git clone https://github.com/limcaroline/travel-world
+
+
+
 
 
 ### Testing
@@ -158,8 +182,7 @@ I first followed these steps from Code Institute module to create a repo in gith
 ### Future Enhancements
 - Add-ons (rental vehicle, insurance, airport shuttle, etc.)
   - includes List of available add-ons with relevant information 
-- As a user, I want the option to include add-ons such as a rental vehicle for convenience.
-  - A list of add-ons for the selected city will be available with relevant details such as description, price, and discount offered.
+
 
 
 
