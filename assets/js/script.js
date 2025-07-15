@@ -74,5 +74,26 @@ document.addEventListener("DOMContentLoaded", () => {
     loadSavedData();
   }
 
+  // Select a hotel via button
+  document.querySelectorAll(".hotel-card button").forEach(button => {
+    button.style.cursor = "pointer";
+    button.addEventListener("click", () => {
+      const card = button.closest(".hotel-card");
+      if (!card) return;
+
+      const selectedHotel = card.getAttribute("data-hotel-name");
+      if (!selectedHotel) return;
+
+      const searchData = JSON.parse(localStorage.getItem("searchData")) || {};
+      searchData.selectedHotel = selectedHotel;
+      localStorage.setItem("searchData", JSON.stringify(searchData));
+
+      window.location.href = "experience.html";
+    });
+  });
+
+
+
+  
 
 });
