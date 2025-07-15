@@ -39,7 +39,7 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="maps.html">Map</a>
+                        <a class="nav-link" href="#">Map</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="Accommodation" href="accommodation.html"><strong>Book
@@ -85,7 +85,7 @@
 
         <!-- Map view option-->
         <div>
-            <a href="maps.html" class="link">See on map</a>
+            <a href="#" class="link">See on map</a>
         </div>
 
         <!-- Booking journey progress view -->
@@ -96,15 +96,13 @@
         <!-- Accommodation options section list view -->
         <section class="container py-5">
             <div class="row g-4">
-            <h6>We offer double rooms with <strong>maximum capacity of 2 people</strong> for the travel packages. Children below 2 years old can stay free of charge.</h6>
-            <p>Prices shown are per room and per night.</p>
                 <!-- Card 1 -->
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card sub-color hotel-card" data-city="Stockholm" data-hotel-name="Hotel Scandia Continental">
+                    <div class="card sub-color hotel-card" data-hotel-name="Hotel Scandia Continental">
                         <div class="card-bg card-bg-1 d-flex flex-column justify-content-end p-3">
                             <div class="card-overlay">
                                 <h5 class="card-title mb-1">Hotel Scandia Continental</h5>
-                                <p class="card-text">Central location in the city<br>1190 kr</p>
+                                <p class="card-text">Central location in Stockholm</p>
                             </div>
                             <div class="text-center">
                                 <button type="button" class="btn custom-button mb-2">Book</button>
@@ -115,11 +113,11 @@
 
                 <!-- Card 2 -->
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card sub-color hotel-card" data-city="Stockholm" data-hotel-name="Hotel Scnadia Old Town">
+                    <div class="card sub-color hotel-card" data-hotel-name="Yours Truly B&B, Madeira">
                         <div class="card-bg card-bg-1 d-flex flex-column justify-content-end p-3">
                             <div class="card-overlay">
                                 <h5 class="card-title mb-1">Hotel Scandia Continental</h5>
-                                <p class="card-text">In the middle of Stockholm's quaint old town</p>
+                                <p class="card-text">Central location in Stockholm</p>
                             </div>
                             <div class="text-center">
                                 <button type="button" class="btn custom-button mb-2">Book</button>
@@ -130,11 +128,11 @@
 
                 <!-- Card 3 -->
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card sub-color hotel-card" data-city="Stockholm" data-hotel-name="Yours Truly B&B, Madeira">
+                    <div class="card sub-color hotel-card" data-hotel-name="Yours Truly B&B, Madeira">
                         <div class="card-bg card-bg-1 d-flex flex-column justify-content-end p-3">
                             <div class="card-overlay">
-                                <h5 class="card-title mb-1">Hotel Scandia South</h5>
-                                <p class="card-text">Live in the hipster part of the city</p>
+                                <h5 class="card-title mb-1">Hotel Scandia Continental</h5>
+                                <p class="card-text">Central location in Stockholm</p>
                             </div>
                             <div class="text-center">
                                 <button type="button" class="btn custom-button mb-2">Book</button>
@@ -145,11 +143,11 @@
 
                 <!-- Card 4 -->
                 <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card sub-color hotel-card" data-city="Gothenburg" data-hotel-name="Hotel Scandia Liseberg">
+                    <div class="card sub-color hotel-card" data-hotel-name="Yours Truly B&B, Madeira">
                         <div class="card-bg card-bg-1 d-flex flex-column justify-content-end p-3">
                             <div class="card-overlay">
-                                <h5 class="card-title mb-1">Hotel Scandia Liseberg</h5>
-                                <p class="card-text">Enjoy the amusement park</p>
+                                <h5 class="card-title mb-1">Hotel Scandia Continental</h5>
+                                <p class="card-text">Central location in Stockholm</p>
                             </div>
                             <div class="text-center">
                                 <button type="button" class="btn custom-button mb-2">Book</button>
@@ -160,6 +158,21 @@
 
 
         </section>
+
+        <!-- Map view -->
+        <h1>Map Page</h1>
+        <div id="map"></div>
+
+        <!-- Google Maps JavaScript code from Google Maps Platform webpage -->
+        <script>
+            (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+                key: "AIzaSyCfAXkfTyBaPbsVZsXNNGkBtamu4TdglaQ",
+                v: "weekly",
+                libraries: "places"
+                // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+                // Add other bootstrap parameters as needed, using camel case.
+            });
+        </script>
     </main>
 
     <!-- Footer -->
@@ -201,7 +214,7 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
-    <!-- External link to JS sheet -->
+    <!-- Internal link to JS sheet -->
     <script src="assets/js/script.js"></script>
 
     <!-- External link to Font Awesome Kit -->

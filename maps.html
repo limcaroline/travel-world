@@ -36,14 +36,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+                        <a class="nav-link active" aria-current="Home" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="">Map</a>
+                        <a class="nav-link active" aria-current="Map" href="maps.html">Map</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="Accommodation" href="accommodation.html"><strong>Book
-                                Now!</strong></a>
+                        <a class="nav-link" href="accommodation.html"><strong>Book Now!</strong></a>
                     </li>
                 </ul>
             </div>
@@ -57,85 +56,52 @@
                 <h1 class="fw-bold">Your Travel World</h1>
                 <p>Your next holiday destination calls</p>
 
+                <!-- Search Bar -->
+                <div class="search container my-4">
+                    <form id="searchForm">
+                        <div class="row g-3 justify-content-center align-items-center">
+                            <div class="col-auto">
+                                <input type="text" id="cityInput" class="form-control"
+                                placeholder="Where are you headed to?" list="cityDropdown" autocomplete="off" />
+
+                                <!-- Search input to filter the dropdown below -->
+                                <datalist id="cityDropdown">
+                                    <option value="Stockholm"></option>
+                                    <option value="Gothenburg"></option>
+                                    <option value="Malmö"></option>
+                                    <option value="Uppsala"></option>
+                                    <option value="Västerås"></option>
+                                    <option value="Örebro"></option>
+                                </datalist>
+                            </div>
+
+                            <!-- Native HTML5 date input fields for date selection -->
+                            <div class="col-auto">
+                                <input type="date" id="startDate" class="form-control" />
+                            </div>
+                            <div class="col-auto">
+                                <input type="date" id="endDate" class="form-control" />
+                            </div>
+
+                            <!-- Number inputs with min and max to control values -->
+                            <div class="col-auto" style="max-width: 125px;">
+                                <input type="number" id="adults" class="form-control" min="1"
+                                    placeholder="Adults" />
+                            </div>
+                            <div class="col-auto" style="max-width: 125px;">
+                                <input type="number" id="children" class="form-control" min="0"
+                                    placeholder="Children" />
+                            </div>
+
+                            <!-- Search button -->
+                            <div class="text-center">
+                                    <button type="submit" class="btn custom-button mb-4">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
-
-        <!-- Map view option-->
-        <div>
-            <a href="#" class="link">See on map</a>
-        </div>
-
-        <!-- Booking journey progress view -->
-        <div>
-            Accommodation >> Experience >> <strong>Booking</strong>
-        </div>
-
-        <!-- booking -->
-        <section id="booking-form" class="container section">
-            <div class="row justify-content-center">
-                <div class="col-12"> <!-- col-md-9 -->
-                    <h2>Booking Form</h2>
-                    <p class="my-4">
-                        <br><br>
-                        Here is your selected travel package.
-                        <br>
-                        Please input your contact details and you will receive an email where you will find the payment
-                        link.
-                        <br>
-                        We are looking forward to having you stay with us soon!
-                    </p>
-                </div>
-
-                <!-- Selection Summary -->
-                <h5>Selection Summary</h5>
-                <div id="output"></div>
-
-                <script>
-                    const data = JSON.parse(localStorage.getItem("searchData"));
-                    const output = document.getElementById("output");
-
-                    if (data) {
-                        output.innerHTML = `
-                    <p><strong>City:</strong> ${data.city}</p>
-                    <p><strong>Hotel:</strong> ${data.selectedHotel}</p>
-                    <p><strong>Experience:</strong> ${data.selectedExperience}</p>
-                    <p><strong>From:</strong> ${data.startDate}</p>
-                    <p><strong>To:</strong> ${data.endDate}</p>
-                    <p><strong>Adults:</strong> ${data.adults}</p>
-                    <p><strong>Children:</strong> ${data.children}</p>
-                `;
-                    } else {
-                        output.innerText = "No data found.";
-                    }
-                </script>
-                <div class="text-end">
-                    <a href="index.html" class="btn mb-4">Cancel booking</a>
-                </div>
-
-                <form action="confirm.html" method="GET">
-                    <div class="row">
-                        <div class="col-12 col-lg-6 mb-3">
-                            <label for="name" class="form-label">Name</label>
-                            <input class="form-control" id="name" name="name" type="text" required />
-                        </div>
-                        <div class="col-12 col-lg-6 mb-3">
-                            <label for="email" class="form-label">Email address</label>
-                            <input class="form-control" id="email" name="email" type="email" required />
-                        </div>
-                        <div class="col-12 col-lg-6 mb-3">
-                            <label for="mobile" class="form-label">Phone number</label>
-                            <input class="form-control" id="mobile" name="mobile" type="number" required />
-                        </div>
-                        <div class="col-12 mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" rows="6" id="message" name="message" required></textarea>
-                        </div>
-                    </div>
-
-                    <button type="submit" class="btn custom-button">Submit</button>
-                </form>
-            </div>
-        </section>
     </main>
 
     <!-- Footer -->
@@ -179,10 +145,6 @@
 
     <!-- External link to JS sheet -->
     <script src="assets/js/script.js"></script>
-    <script>
-        // Display total when page loads
-        displayBookingSummary();
-    </script>
 
     <!-- External link to Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/5c4066336f.js" crossorigin="anonymous"></script>

@@ -180,8 +180,8 @@ Run this command: git clone https://github.com/limcaroline/travel-world
 
 
 ### Future Enhancements
-- Add-ons (rental vehicle, insurance, airport shuttle, etc.)
-  - includes List of available add-ons with relevant information 
+- Create add-ons page for rental vehicle, insurance, airport shuttle, etc.
+- Add cumulative prices in the summaries
 
 
 

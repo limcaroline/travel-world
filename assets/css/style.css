@@ -125,7 +125,11 @@ main {
     font-weight: bold;
 }
 
-
+#map {
+  margin-top: 20px;
+  height: 500px;
+  width: 100%;
+}
 
 
 
