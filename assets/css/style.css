@@ -54,6 +54,21 @@ main {
   text-align: center;
 }
 
+/* Buttons */
+.custom-button {
+    border: 1px solid var(--alternate-dark-color);
+    background-color: var(--alternate-dark-color);
+    color: white;
+    font-weight: bold;
+}
+
+.custom-button:hover {
+    border: 1px solid var(--alternate-light-color);
+    background-color: var(--alternate-light-color);
+    color: white;
+    font-weight: bold;
+}
+
 
 
 
@@ -77,4 +92,19 @@ main {
 #contact h2 {
     color: white;
     margin-top: 8px;
+}
+
+#contact .social-links {
+    display: flex;                  
+    justify-content: center;  
+}
+
+#contact .social-links i {
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+#contact .social-links i:hover {
+    color: var(--highlight-color);
 }

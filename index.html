@@ -29,9 +29,117 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navigation using bootstrap navbar-->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="Home" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><strong>Book Now!</strong></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <main>
+        <!-- Hero -->
+        <div class="hero d-flex align-items-center justify-content-center">
+            <div class="hero-overlay text-center">
+                <h1 class="fw-bold" style="color: #c9792b;">Your Travel World</h1>
+                <p>Your next holiday destination calls</p>
 
+                <!-- Search Bar -->
+                <div class="search container">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-auto form-container">
+                            <input type="text" id="cityInput" class="form-control"
+                                placeholder="Where are you headed to?" list="cityDropdown" autocomplete="off" />
+
+                            <!-- Search input to filter the dropdown below -->
+                            <datalist id="cityDropdown">
+                                <option value="Stockholm"></option>
+                                <option value="Gothenburg"></option>
+                                <option value="Malmö"></option>
+                                <option value="Uppsala"></option>
+                                <option value="Västerås"></option>
+                                <option value="Örebro"></option>
+                            </datalist>
+                        </div>
+
+                        <!-- Native HTML5 date input fields for date selection -->
+                        <div class="col-auto">
+                            <input type="date" id="startDate" class="form-control" />
+                        </div>
+                        <div class="col-auto">
+                            <input type="date" id="endDate" class="form-control" />
+                        </div>
+
+                        <!-- Number inputs with min and max to control values -->
+                        <div class="col-auto" style="max-width: 80px;">
+                            <input type="number" id="adults" class="form-control" min="1" value="1"
+                                placeholder="Adults" />
+                        </div>
+                        <div class="col-auto" style="max-width: 80px;">
+                            <input type="number" id="children" class="form-control" min="0" value="0"
+                                placeholder="Children" />
+                        </div>
+
+                        <!-- Search button -->
+                        <div class="text-center">
+                            <form id="searchForm" class="search container">
+                                <button type="submit" class="btn custom-button mb-4">Search</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="mt-auto">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h2 class="display-6">Contact us!</h2>
+                <!-- Contact details and social media -->
+                <div class="col-12 col-md-6 col-xl-4">
+                    Email address: your_travelworld@gmail.com
+                    <br>
+                    Phone number: +46 71 789 3456
+                    <br>
+                    <!-- Social media -->
+                    <div class="social-links mt-4">
+                        <a href="https://www.facebook.com/" target="_blank"
+                            aria-label="Visit our Facebook page (opens in a new tab)" rel="noopener">
+                            <i class="fa-brands fa-square-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank"
+                            aria-label="Visit our Instagram page (opens in a new tab)" rel="noopener">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/" target="_blank"
+                            aria-label="Visit our TikTok page (opens in a new tab)" rel="noopener">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Opening times -->
+                <div class="col-12 col-md-6 col-xl-4">Opening hours: 08:00-18:00 daily </div>
+            </div>
+        </div>
+    </footer>
 
 
     <!-- External link to Bootstrap JS -->
@@ -42,98 +150,13 @@
     <!-- External link to JS sheet -->
     <script src="assets/js/script.js"></script>
 
-</body class="d-flex flex-column min-vh-100">
-<!-- Navigation using bootstrap navbar-->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="Home" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Map</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><strong>Book Now!</strong></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<main>
-<!-- Hero -->
-<div class="hero d-flex align-items-center justify-content-center">
-    <div class="hero-overlay text-center">
-        <h1 class="fw-bold" style="color: #c9792b;">Your Travel World</h1>
-        <p>Your next holiday destination calls</p>
+    <!-- External link to Font Awesome Kit -->
+    <script
+      src="https://kit.fontawesome.com/5c4066336f.js"
+      crossorigin="anonymous"
+    ></script>
 
-        <!-- Search Bar -->
-        <div class="search container">
-            <div class="row g-3 align-items-center">
-                <div class="col-auto form-container">
-                    <input type="text" id="cityInput" class="form-control" placeholder="Where are you headed to?"
-                        list="cityDropdown" autocomplete="off" />
-                    <!-- Search input to filter the dropdown below -->
-                    <datalist id="cityDropdown">
-                        <option value="Stockholm"></option>
-                        <option value="Gothenburg"></option>
-                        <option value="Malmö"></option>
-                        <option value="Uppsala"></option>
-                        <option value="Västerås"></option>
-                        <option value="Örebro"></option>
-                    </datalist>
-                </div>
-
-                <!-- Native HTML5 date input fields for date selection -->
-                <div class="col-auto">
-                    <input type="date" id="startDate" class="form-control" />
-                </div>
-                <div class="col-auto">
-                    <input type="date" id="endDate" class="form-control" />
-                </div>
-
-                <!-- Number inputs with min and max to control values -->
-                <div class="col-auto" style="max-width: 80px;">
-                    <input type="number" id="adults" class="form-control" min="1" value="1" placeholder="Adults" />
-                </div>
-                <div class="col-auto" style="max-width: 80px;">
-                    <input type="number" id="children" class="form-control" min="0" value="0" placeholder="Children" />
-                </div>
-                <!-- Search button -->
-                <div class="text-center">
-                    <form id="searchForm" class="search container">
-                        <button type="submit" class="btn custom-button mb-4">Search</button>
-                    </form>
-                </div>
-
-
-
-            </div>
-        </div>
-
-        <!-- Search bar-->
-</main>
-
-        <!-- Footer -->
-        <footer id="contact" class="mt-auto">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <h2 class="display-6">Contact us!</h2>
-                    <!-- Contact details and social media -->
-                    <div class="col-12 col-md-6 col-xl-4">Contact details & social media</div>
-                    <!-- Opening times -->
-                    <div class="col-12 col-md-6 col-xl-4">Opening times</div>
-                </div>
-            </div>
-        </footer>
-
-
-
+</body>
 
 
 </html>
