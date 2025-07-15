@@ -1,0 +1,19 @@
+/* CSS Variables */
+:root {
+    --primary-font: "Lunasima", sans-serif;
+    --secondary-font: "Lexend Deca", cursive;
+    --tertiary-font: "Madimi One", cursive;
+    --main-dark-color: #b16f37; /* bronze */
+    --sub-light-color: #5f3c3a; /* dark brown */
+    --alternate-dark-color: #446494; /* dark blue */
+    --alternate-light-color: #afbfe2; /*light blue */
+}
+
+/* Global Styles */
+body {
+  font-family: "Lunasima", sans-serif;
+  color: #b16f37;
+  margin: 0;
+  padding-top: 0px;
+  text-align: center;
+}
