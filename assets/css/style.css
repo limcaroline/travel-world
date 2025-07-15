@@ -63,6 +63,52 @@ main {
     justify-content: center;
 }
 
+.card-bg {
+  position: relative;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem 0.5rem 0 0;
+  overflow: hidden;
+}
+
+.card-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 77%;
+  padding: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.card-overlay .card-title {
+    color: var(--main-dark-color);
+
+}
+
+.card-overlay .card-text {
+    color: var(--alternate-dark-color);
+    font-size: small;
+}
+
+/* Individual card backgrounds */
+.card-bg-1 { background-image: url("../images/background.webp"); }
+.card-bg-2 { background-image: url("../images/bg2.webp"); }
+.card-bg-3 { background-image: url("../images/bg3.webp"); }
+.card-bg-4 { background-image: url("../images/bg4.webp"); }
+.card-bg-5 { background-image: url("../images/bg2.webp"); }
+.card-bg-6 { background-image: url("../images/bg3.webp"); }
+.card-bg-7 { background-image: url("../images/bg4.webp"); }
+.card-bg-8 { background-image: url("../images/bg2.webp"); }
+
 /* Buttons */
 .custom-button {
     border: 1px solid var(--alternate-dark-color);
