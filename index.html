@@ -65,25 +65,72 @@
         </div>
     </div>
 </nav>
-
+<main>
 <!-- Hero -->
-<h1>Your Travel World</h1>
-<p>Your next holiday destination calls</p>
+<div class="hero d-flex align-items-center justify-content-center">
+    <div class="hero-overlay text-center">
+        <h1 class="fw-bold" style="color: #c9792b;">Your Travel World</h1>
+        <p>Your next holiday destination calls</p>
 
-<!-- Search bar-->
+        <!-- Search Bar -->
+        <div class="search container">
+            <div class="row g-3 align-items-center">
+                <div class="col-auto form-container">
+                    <input type="text" id="cityInput" class="form-control" placeholder="Where are you headed to?"
+                        list="cityDropdown" autocomplete="off" />
+                    <!-- Search input to filter the dropdown below -->
+                    <datalist id="cityDropdown">
+                        <option value="Stockholm"></option>
+                        <option value="Gothenburg"></option>
+                        <option value="Malmö"></option>
+                        <option value="Uppsala"></option>
+                        <option value="Västerås"></option>
+                        <option value="Örebro"></option>
+                    </datalist>
+                </div>
 
-<!-- Footer -->
-<footer class="mt-auto">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-12">Contact us!</div>
-            <!-- Contact details and social media -->
-            <div class="col-12 col-md-6 col-xl-4">Contact details & social media</div>
-            <!-- Opening times -->
-            <div class="col-12 col-md-6 col-xl-4">Opening times</div>
+                <!-- Native HTML5 date input fields for date selection -->
+                <div class="col-auto">
+                    <input type="date" id="startDate" class="form-control" />
+                </div>
+                <div class="col-auto">
+                    <input type="date" id="endDate" class="form-control" />
+                </div>
+
+                <!-- Number inputs with min and max to control values -->
+                <div class="col-auto" style="max-width: 80px;">
+                    <input type="number" id="adults" class="form-control" min="1" value="1" placeholder="Adults" />
+                </div>
+                <div class="col-auto" style="max-width: 80px;">
+                    <input type="number" id="children" class="form-control" min="0" value="0" placeholder="Children" />
+                </div>
+                <!-- Search button -->
+                <div class="text-center">
+                    <form id="searchForm" class="search container">
+                        <button type="submit" class="btn custom-button mb-4">Search</button>
+                    </form>
+                </div>
+
+
+
+            </div>
         </div>
-    </div>
-</footer>
+
+        <!-- Search bar-->
+</main>
+
+        <!-- Footer -->
+        <footer id="contact" class="mt-auto">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <h2 class="display-6">Contact us!</h2>
+                    <!-- Contact details and social media -->
+                    <div class="col-12 col-md-6 col-xl-4">Contact details & social media</div>
+                    <!-- Opening times -->
+                    <div class="col-12 col-md-6 col-xl-4">Opening times</div>
+                </div>
+            </div>
+        </footer>
 
 
 
