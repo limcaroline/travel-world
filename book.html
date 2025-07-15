@@ -57,6 +57,35 @@
                 <h1 class="fw-bold">Your Travel World</h1>
                 <p>Your next holiday destination calls</p>
 
+            </div>
+        </div>
+
+        <!-- Map view option-->
+        <div>
+            <a href="#" class="link">See on map</a>
+        </div>
+
+        <!-- Booking journey progress view -->
+        <div>
+            Accommodation >> Experience >> <strong>Booking</strong>
+        </div>
+
+        <!-- booking -->
+        <section id="booking-form" class="container section">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-9">
+                    <h2>Booking Form</h2>
+                    <p class="my-4">
+                        <br><br>
+                        Here is your selected travel package.
+                        <br>
+                        Please input your contact details and you will receive an email where you will find the payment
+                        link.
+                        <br>
+                        We are looking forward to having you stay with us soon!
+                    </p>
+                </div>
+                
                 <!-- Selection Summary -->
                 <h5>Selection Summary</h5>
                 <div id="output"></div>
@@ -68,6 +97,8 @@
                     if (data) {
                         output.innerHTML = `
                     <p><strong>City:</strong> ${data.city}</p>
+                    <p><strong>Hotel:</strong> ${data.selectedHotel}</p>
+                    <p><strong>Experience:</strong> ${data.selectedExperience}</p>
                     <p><strong>From:</strong> ${data.startDate}</p>
                     <p><strong>To:</strong> ${data.endDate}</p>
                     <p><strong>Adults:</strong> ${data.adults}</p>
@@ -78,85 +109,32 @@
                     }
                 </script>
                 <div class="text-end">
-                    <a href="index.html" class="btn mb-4">Edit selection</a>
+                    <a href="index.html" class="btn mb-4">Cancel booking</a>
                 </div>
+
+                <form action="#" method="GET">
+                    <div class="row">
+                        <div class="col-12 col-lg-6 mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input class="form-control" id="name" name="name" type="text" required />
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input class="form-control" id="email" name="email" type="email" required />
+                        </div>
+                        <div class="col-12 col-lg-6 mb-3">
+                            <label for="mobile" class="form-label">Phone number</label>
+                            <input class="form-control" id="mobile" name="mobile" type="number" required />
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" rows="6" id="message" name="message" required></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn custom-button">Submit</button>
+                </form>
             </div>
-        </div>
-
-        <!-- Map view option-->
-        <div>
-            <a href="#" class="link">See on map</a>
-        </div>
-
-        <!-- Booking journey progress view -->
-        <div>
-            <strong>Accommodation</strong> >> Experience >> Booking
-        </div>
-
-        <!-- Accommodation options section list view -->
-        <section class="container py-5">
-            <div class="row g-4">
-                <!-- Card 1 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card sub-color hotel-card" data-hotel-name="Hotel Scandia Continental">
-                        <div class="card-bg card-bg-1 d-flex flex-column justify-content-end p-3">
-                            <div class="card-overlay">
-                                <h5 class="card-title mb-1">Hotel Scandia Continental</h5>
-                                <p class="card-text">Central location in Stockholm</p>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" class="btn custom-button mb-2">Book</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card sub-color hotel-card" data-hotel-name="Yours Truly B&B, Madeira">
-                        <div class="card-bg card-bg-1 d-flex flex-column justify-content-end p-3">
-                            <div class="card-overlay">
-                                <h5 class="card-title mb-1">Hotel Scandia Continental</h5>
-                                <p class="card-text">Central location in Stockholm</p>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" class="btn custom-button mb-2">Book</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card sub-color hotel-card" data-hotel-name="Yours Truly B&B, Madeira">
-                        <div class="card-bg card-bg-1 d-flex flex-column justify-content-end p-3">
-                            <div class="card-overlay">
-                                <h5 class="card-title mb-1">Hotel Scandia Continental</h5>
-                                <p class="card-text">Central location in Stockholm</p>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" class="btn custom-button mb-2">Book</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="col-12 col-md-6 col-xl-3">
-                    <div class="card sub-color hotel-card" data-hotel-name="Yours Truly B&B, Madeira">
-                        <div class="card-bg card-bg-1 d-flex flex-column justify-content-end p-3">
-                            <div class="card-overlay">
-                                <h5 class="card-title mb-1">Hotel Scandia Continental</h5>
-                                <p class="card-text">Central location in Stockholm</p>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" class="btn custom-button mb-2">Book</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
         </section>
     </main>
 
