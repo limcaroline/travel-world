@@ -36,13 +36,13 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="Home" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Map</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><strong>Book Now!</strong></a>
+                        <a class="nav-link" href="accommodation.html"><strong>Book Now!</strong></a>
                     </li>
                 </ul>
             </div>
@@ -56,52 +56,28 @@
                 <h1 class="fw-bold">Your Travel World</h1>
                 <p>Your next holiday destination calls</p>
 
-                <!-- Search Bar -->
-                <div class="search container my-4">
-                    <form id="searchForm">
-                        <div class="row g-3 justify-content-center align-items-center">
-                            <div class="col-auto">
-                                <input type="text" id="cityInput" class="form-control"
-                                placeholder="Where are you headed to?" list="cityDropdown" autocomplete="off" />
+                <!-- Selection Summary -->
+                <h2>Selection Summary</h2>
 
-                                <!-- Search input to filter the dropdown below -->
-                                <datalist id="cityDropdown">
-                                    <option value="Stockholm"></option>
-                                    <option value="Gothenburg"></option>
-                                    <option value="Malmö"></option>
-                                    <option value="Uppsala"></option>
-                                    <option value="Västerås"></option>
-                                    <option value="Örebro"></option>
-                                </datalist>
-                            </div>
-
-                            <!-- Native HTML5 date input fields for date selection -->
-                            <div class="col-auto">
-                                <input type="date" id="startDate" class="form-control" />
-                            </div>
-                            <div class="col-auto">
-                                <input type="date" id="endDate" class="form-control" />
-                            </div>
-
-                            <!-- Number inputs with min and max to control values -->
-                            <div class="col-auto" style="max-width: 125px;">
-                                <input type="number" id="adults" class="form-control" min="1"
-                                    placeholder="Adults" />
-                            </div>
-                            <div class="col-auto" style="max-width: 125px;">
-                                <input type="number" id="children" class="form-control" min="0"
-                                    placeholder="Children" />
-                            </div>
-
-                            <!-- Search button -->
-                            <div class="text-center">
-                                    <button type="submit" class="btn custom-button mb-4">Search</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
+
+        <!-- Map view option-->
+        <div>
+            <a href="#" class="link">See on map</a>
+        </div>
+
+        <!-- Booking journey progress view -->
+        <div>
+            Accommodation <!-- active in bold --> >> Experience >> Add-ons
+        </div>
+
+        <!-- Accommodation options section list view -->
+        <section class="container py-5">
+
+
+            
+        </section>
     </main>
 
     <!-- Footer -->

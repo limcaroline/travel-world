@@ -38,6 +38,11 @@ main {
   text-align: center;
 }
 
+.hero h1 {
+    font-family: "Lexend Deca", cursive;
+
+}
+
 .hero p {
   padding-top: 0px;
 
@@ -52,6 +57,10 @@ main {
   padding: 20px;
   border-radius: 10px;
   text-align: center;
+}
+
+.search {
+    justify-content: center;
 }
 
 /* Buttons */
