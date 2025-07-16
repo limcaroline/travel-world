@@ -181,7 +181,9 @@ Manually tested the pages for responsiveness, functionality and user experience.
 
 Automated testing
 
-Validate the HTML code for all 3 pages. >> Fixed few errors such as unclosed elements and warnings such as lacking headers. See screenshots for example.
+Validate the HTML code for all 3 pages. >> Looked into few warnings as below. See screenshots for example.
+
+Also see Frameworks, Libraries, and Programs used for what helped me in these tests.
 
 ![HTML checker](assets/images/Image 2025-07-16 at 03.28.webp)
 
@@ -197,11 +199,17 @@ Changed aria-current from "Home" to "page" for all html pages.
 From w3c css validator: All css ok
 ![HTML checker](assets/images/w3c.webp)
 
+From auto-prefixer: Copied into codes.
+![HTML checker](assets/images/autoprefixer.webp)
 
+From lighthouse:
+Used Lighthouse to create automated reports that assess the performance, accessibility and best practices of the pages. I have gotten the results to green particularly on performance by changing the image file types from png/jpg to webp. Initially it told me I had to change the contrast on the footer, but I checked color contrast and it was high contrast so I ignored it. Results are all green
+![HTML checker](assets/images/lighthouse-results.webp)
+![HTML checker](assets/images/lighthouse-contrast.webp)
+![HTML checker](assets/images/contrast-checker.webp)
 
-Used Lighthouse to create automated reports that assess the performance, accessibility and best practices of the pages. I have gotten the results to green particularly on performance by changing the image file types from png/jpg to webp. Also updated the color contrast and put some styling in bold in parts like navigation menu and buttons
-![HTML checker](assets/images/Image 2025-07-16 at 03.46.webp)
-
+From JSHint:
+![HTML checker](assets/images/jshint.webp)
 
 ### Future Enhancements
 - Create add-ons page for rental vehicle, insurance, airport shuttle, etc.
@@ -224,7 +232,7 @@ Media
 Code
 - Bootstrap for cards and similar, also see comments in VSCode https://getbootstrap.com/
 - Code Institute's modules, including BoardWalk Games and Love Running https://learn.codeinstitute.net/dashboard
-- ChatGPT for helping with debugging, structuring, and ideas https://chatgpt.com/
+- ChatGPT for helping with ideas, debugging, and structuring https://chatgpt.com/
 - Autoprefixer for code prefix on transition
 
 

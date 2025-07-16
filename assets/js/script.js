@@ -458,13 +458,13 @@ function filterMarkersByCity(cityName) {
 
 
 // Wait until Google Maps is fully loaded
-//if (google?.maps?.importLibrary) {
-  //  initMap();
-//} else {
+if (google?.maps?.importLibrary) {
+    initMap();
+} else {
     // Fallback: wait for the dynamic loader to finish
     window.google = window.google || {};
     window.google.maps = window.google.maps || {};
     window.google.maps.__ib__ = () => {
         initMap();
     };
-//}
+}
