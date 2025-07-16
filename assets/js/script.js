@@ -418,7 +418,7 @@ document.querySelectorAll(".hotel-card button").forEach(button => {
         searchData.selectedHotel = selectedHotel;
         localStorage.setItem("searchData", JSON.stringify(searchData));
         
-        alert(`You selected: ${selectedHotel}. Redirecting to experience page...`);
+        alert(`You selected ${selectedHotel}. Redirecting to Experience page...`);
 
         window.location.href = "experience.html";
     });
@@ -437,6 +437,8 @@ document.querySelectorAll(".experience-card button").forEach(button => {
         const searchData = JSON.parse(localStorage.getItem("searchData")) || {};
         searchData.selectedExperience = selectedExperience;
         localStorage.setItem("searchData", JSON.stringify(searchData));
+
+        alert(`You selected ${selectedExperience}. Redirecting to Booking page...`);
 
         window.location.href = "book.html";
     });
