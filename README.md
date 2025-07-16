@@ -83,7 +83,7 @@ See Projects page in the travel-world Github repository for complete user storie
   - includes Search option and highlighted travel packages
 - Map
   - includes hotels, attractions, and restaurants with relevant information
-- Book Now!
+- Book Now! (Note: Removed in the final version as I realized it might be confusing for users to proceed directly to the Accommodation.html without selecting the search details first)
   - includes a final selection summary and allows user to book the travel package
 
 
@@ -185,15 +185,23 @@ Validate the HTML code for all 3 pages. >> Fixed few errors such as unclosed ele
 
 ![HTML checker](assets/images/Image 2025-07-16 at 03.28.webp)
 
-Validation testing Note: Also used autoprefixer and CSS validation >> Copy pasted from autofixer for the transition code for social links, similar to what was done in Boardwalk Games which I have followed through this project. All CSS ok.
-![HTML checker](assets/images/Image 2025-07-16 at 03.31.webp)
-![HTML checker](assets/images/Image 2025-07-16 at 03.32.webp)
+Validation testing Note:
+
+From nu html checker:
+Changed aria-current from "Home" to "page" for all html pages.
+![HTML checker](assets/images/nu-html-checker-before.webp.webp)
+![HTML checker](assets/images/nu-html-checker.webp)
+![HTML checker](assets/images/nu-html-checker-2.webp)
+![HTML checker](assets/images/nu-html-checker-3.webp)
+
+From w3c css validator: All css ok
+![HTML checker](assets/images/w3c.webp)
+
+
+
+Used Lighthouse to create automated reports that assess the performance, accessibility and best practices of the pages. I have gotten the results to green particularly on performance by changing the image file types from png/jpg to webp. Also updated the color contrast and put some styling in bold in parts like navigation menu and buttons
 ![HTML checker](assets/images/Image 2025-07-16 at 03.46.webp)
 
-
-
-
-Use Lighthouse to create automated reports that assess the performance, accessibility and best practices of the pages. I have gotten the results to green particularly on performance by changing the image file types from png/jpg to webp. Also updated the color contrast and put some styling in bold in parts like navigation menu and buttons
 
 ### Future Enhancements
 - Create add-ons page for rental vehicle, insurance, airport shuttle, etc.
