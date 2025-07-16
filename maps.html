@@ -36,13 +36,14 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="Home" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="Map" href="maps.html">Map</a>
+                        <a class="nav-link" href="maps.html">Map</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="accommodation.html"><strong>Book Now!</strong></a>
+                        <a class="nav-link active" aria-current="Accommodation" href="accommodation.html"><strong>Book
+                                Now!</strong></a>
                     </li>
                 </ul>
             </div>
@@ -55,53 +56,46 @@
             <div class="hero-overlay text-center">
                 <h1 class="fw-bold">Your Travel World</h1>
                 <p>Your next holiday destination calls</p>
-
-                <!-- Search Bar -->
-                <div class="search container my-4">
-                    <form id="searchForm">
-                        <div class="row g-3 justify-content-center align-items-center">
-                            <div class="col-auto">
-                                <input type="text" id="cityInput" class="form-control"
-                                placeholder="Where are you headed to?" list="cityDropdown" autocomplete="off" />
-
-                                <!-- Search input to filter the dropdown below -->
-                                <datalist id="cityDropdown">
-                                    <option value="Stockholm"></option>
-                                    <option value="Gothenburg"></option>
-                                    <option value="Malmö"></option>
-                                    <option value="Uppsala"></option>
-                                    <option value="Västerås"></option>
-                                    <option value="Örebro"></option>
-                                </datalist>
-                            </div>
-
-                            <!-- Native HTML5 date input fields for date selection -->
-                            <div class="col-auto">
-                                <input type="date" id="startDate" class="form-control" />
-                            </div>
-                            <div class="col-auto">
-                                <input type="date" id="endDate" class="form-control" />
-                            </div>
-
-                            <!-- Number inputs with min and max to control values -->
-                            <div class="col-auto" style="max-width: 125px;">
-                                <input type="number" id="adults" class="form-control" min="1"
-                                    placeholder="Adults" />
-                            </div>
-                            <div class="col-auto" style="max-width: 125px;">
-                                <input type="number" id="children" class="form-control" min="0"
-                                    placeholder="Children" />
-                            </div>
-
-                            <!-- Search button -->
-                            <div class="text-center">
-                                    <button type="submit" class="btn custom-button mb-4">Search</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
             </div>
         </div>
+
+        <!-- Map view -->
+        <h1>Map view</h1>
+        <div id="map"></div>
+
+
+        <!-- Filter on map -->
+        <div id="controls" class="justify-content-center">
+            <select id="filterSelect">
+                <option value="all">All</option>
+                <option value="all">Cities</option>
+                <option value="hotel">Hotels</option>
+                <option value="restaurant">Restaurants</option>
+                <option value="attraction">Attractions</option>
+            </select>
+
+            <!-- Search on map -->
+            <!-- <input type="text" id="searchBox" placeholder="Search by name..." /> -->
+            <input type="text" id="cityInput" class="form-control" placeholder="Search city" list="cityDropdown"
+                autocomplete="off" />
+
+            <!-- Search input to filter the dropdown below -->
+            <datalist id="cityDropdown">
+                <option value="Stockholm"></option>
+                <option value="Gothenburg"></option>
+                <option value="Malmö"></option>
+            </datalist>
+        </div>
+
+        <!-- Google Maps JavaScript code from Google Maps Platform webpage -->
+        <script>
+            (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })({
+                key: "AIzaSyCfAXkfTyBaPbsVZsXNNGkBtamu4TdglaQ",
+                v: "weekly",
+                libraries: "places"
+            });
+        </script>
+
     </main>
 
     <!-- Footer -->
@@ -143,8 +137,10 @@
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 
-    <!-- External link to JS sheet -->
+    <!-- Internal link to JS sheet -->
     <script src="assets/js/script.js"></script>
+
+    <input id="search-box" type="text" placeholder="Search for places" />
 
     <!-- External link to Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/5c4066336f.js" crossorigin="anonymous"></script>

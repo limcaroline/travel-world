@@ -39,7 +39,7 @@
                         <a class="nav-link active" aria-current="Home" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="map.html">Map</a>
+                        <a class="nav-link" href="maps.html">Map</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="accommodation.html"><strong>Book Now!</strong></a>
@@ -61,7 +61,7 @@
                     <form id="searchForm">
                         <div class="row g-3 justify-content-center align-items-center">
                             <div class="col-auto">
-                                <input type="text" id="cityInput" class="form-control"
+                                <input type="text" id="cityInput" class="form-control" required
                                 placeholder="Where are you headed to?" list="cityDropdown" autocomplete="off" />
 
                                 <!-- Search input to filter the dropdown below -->
@@ -69,27 +69,24 @@
                                     <option value="Stockholm"></option>
                                     <option value="Gothenburg"></option>
                                     <option value="Malmö"></option>
-                                    <option value="Uppsala"></option>
-                                    <option value="Västerås"></option>
-                                    <option value="Örebro"></option>
                                 </datalist>
                             </div>
 
                             <!-- Native HTML5 date input fields for date selection -->
                             <div class="col-auto">
-                                <input type="date" id="startDate" class="form-control" />
+                                <input type="date" id="startDate" class="form-control" required />
                             </div>
                             <div class="col-auto">
-                                <input type="date" id="endDate" class="form-control" />
+                                <input type="date" id="endDate" class="form-control" required />
                             </div>
 
                             <!-- Number inputs with min and max to control values -->
                             <div class="col-auto" style="max-width: 125px;">
-                                <input type="number" id="adults" class="form-control" min="1"
+                                <input type="number" id="adults" class="form-control" required min="1" step="1"
                                     placeholder="Adults" />
                             </div>
                             <div class="col-auto" style="max-width: 125px;">
-                                <input type="number" id="children" class="form-control" min="0"
+                                <input type="number" id="children" class="form-control" required min="0" step="1"
                                     placeholder="Children" />
                             </div>
 

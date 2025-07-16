@@ -1,5 +1,5 @@
 // City list
-const cities = ["Stockholm", "Gothenburg", "Malmö", "Uppsala", "Västerås"];
+const cities = ["Stockholm", "Gothenburg", "Malmö"];
 
 // Elements on index.html
 const input = document.getElementById("cityInput");
@@ -26,6 +26,17 @@ if (input && dropdown) {
     populateDropdown(cities);
     input.addEventListener("input", filterCities);
 }
+
+// Set today's date as min for date inputs
+document.addEventListener("DOMContentLoaded", function () {
+    const today = new Date().toISOString().split('T')[0];
+    const startDateInput = document.getElementById('startDate');
+    const endDateInput = document.getElementById('endDate');
+
+    if (startDateInput) startDateInput.setAttribute('min', today);
+    if (endDateInput) endDateInput.setAttribute('min', today);
+});
+
 
 // Save form data and redirect
 function saveAndRedirect() {
@@ -67,7 +78,7 @@ if (resultsForm) {
     document.addEventListener("DOMContentLoaded", loadSavedData);
 }
 
-// Google Maps and Places integration (only on index.html)
+// Google Maps and Places integration
 let map;
 let service;
 const allMarkers = [];
@@ -83,7 +94,6 @@ async function initMap() {
 
     service = new google.maps.places.PlacesService(map);
 
-
     // Dynamic place lookup
     const dynamicPlaces = [
         // Cities
@@ -95,11 +105,13 @@ async function initMap() {
 
         {
             query: "Gothenburg",
+            icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png",
             type: "city"
         },
 
         {
             query: "Malmö",
+            icon: "http://maps.google.com/mapfiles/ms/icons/pink-dot.png",
             type: "city"
         },
 
@@ -109,22 +121,98 @@ async function initMap() {
             price: "1215kr",
             rating: "8.7",
             icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
-            type: "hotel"
+            type: "hotel",
+            city: "Stockholm"
         },
         {
             query: "Scandic Gamla Stan",
             price: "1119kr",
-            rating: "8.5",
+            rating: "8.0",
             icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
-            type: "hotel"
+            type: "hotel",
+            city: "Stockholm"
         },
         {
             query: "Scandic Malmen",
             price: "1340kr",
+            rating: "7.7",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            type: "hotel",
+            city: "Stockholm"
+        },
+        {
+            query: "Scandic Crown",
+            price: "1199",
+            rating: "9.3",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            type: "hotel",
+            city: "Gothenburg"
+        },
+        {
+            query: "Scandic Europa",
+            price: "1240",
+            rating: "8.2",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            type: "hotel",
+            city: "Gothenburg"
+        },
+        {
+            query: "Scandic Opalen",
+            price: "1120kr",
+            rating: "8.9",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            type: "hotel",
+            city: "Gothenburg"
+        },
+        {
+            query: "Scandic Rubinen",
+            price: "990",
+            rating: "7.9",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            type: "hotel",
+            city: "Gothenburg"
+        },
+        {
+            query: "Scandic Triangeln",
+            price: "1170",
+            rating: "9.1",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            type: "hotel",
+            city: "Malmö"
+        },
+        {
+            query: "Scandic Malmö City",
+            price: "1170",
+            rating: "8.4",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            type: "hotel",
+            city: "Malmö"
+        },
+        {
+            query: "Scandic Stortorget",
+            price: "990",
             rating: "8.3",
             icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
-            type: "hotel"
+            type: "hotel",
+            city: "Malmö"
         },
+        {
+            query: "Scandic Kramer",
+            price: "1240",
+            rating: "8.1",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            type: "hotel",
+            city: "Malmö"
+        },
+        {
+            query: "Scandic Park",
+            price: "1120",
+            rating: "8.7",
+            icon: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+            type: "hotel",
+            city: "Stockholm"
+        },
+
 
         // Attractions
         {
@@ -153,46 +241,76 @@ async function initMap() {
             type: "attraction"
         },
         {
-            query: "Skeppsholmen",
+            query: "Liseberg Amusement Park",
             icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
             type: "attraction"
         },
         {
-            query: "Avicii Arena",
+            query: "Universeum",
             icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
             type: "attraction"
         },
         {
-            query: "Hagaparken",
+            query: "Gothenburg Museum of Art",
             icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
             type: "attraction"
         },
         {
-            query: "Drottningholm Palace",
+            query: "Haga",
             icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
             type: "attraction"
         },
         {
-            query: "Kristineberg Strand",
+            query: "Malmö Castle",
+            icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+            type: "attraction"
+        },
+        {
+            query: "Ribergsborgsstranden",
+            icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+            type: "attraction"
+        },
+        {
+            query: "Malmö Konstmuseum",
+            icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+            type: "attraction"
+        },
+        {
+            query: "Folkets Park",
             icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
             type: "attraction"
         },
 
 
 
-        // Restaurants and Cafes
+        // Restaurants
         {
             query: "Restaurant Pelikan Stockholm",
             icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
             type: "restaurant"
         },
         {
-            query: "Vete-katten Kungsgatan",
+            query: "Meatballs for the People",
             icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
             type: "restaurant"
         },
         {
-            query: "Meatballs for the People",
+            query: "Restaurant Sjömagasinet",
+            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            type: "restaurant"
+        },
+        {
+            query: "Magazzino",
+            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            type: "restaurant"
+        },
+        {
+            query: "Bastard",
+            icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+            type: "restaurant"
+        },
+        {
+            query: "Saltimporten Canteen",
             icon: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
             type: "restaurant"
         },
@@ -226,7 +344,7 @@ async function initMap() {
             `,
                     });
                     marker.addListener("click", () => infoWindow.open(map, marker));
-                    allMarkers.push({ marker, type: placeItem.type || "other", title: place.name });
+                    allMarkers.push({ marker, type: placeItem.type || "other", title: place.name, city: placeItem.city });
                     console.log(`Added: ${place.name}`);
                 } else {
                     console.error(`Not found: "${placeItem.query}"`);
@@ -234,9 +352,31 @@ async function initMap() {
             }
         );
     });
+    document.getElementById("filterSelect").addEventListener("change", () => {
+        const selectedType = document.getElementById("filterSelect").value;
+        allMarkers.forEach(({ marker, type }) => {
+            marker.setMap(selectedType === "all" || selectedType === type ? map : null);
+        });
+    });
+    document.getElementById("cityInput").addEventListener("change", function () {
+        const cityName = this.value.trim().toLowerCase();
+
+        const match = allMarkers.find(
+            m => m.type === "city" && m.title.toLowerCase() === cityName
+        );
+
+        if (match) {
+            map.setCenter(match.marker.getPosition());
+            map.setZoom(13);
+        } else {
+            console.warn("City not found in markers:", cityName);
+        }
+    });
+
+
 }
 
-// Load saved data when DOM is ready on accommodation.html, 
+// Load saved data when DOM is ready 
 document.addEventListener("DOMContentLoaded", () => {
     if (document.getElementById("resultsForm")) {
         loadSavedData();
@@ -270,31 +410,9 @@ document.querySelectorAll(".hotel-card button").forEach(button => {
         const searchData = JSON.parse(localStorage.getItem("searchData")) || {};
         searchData.selectedHotel = selectedHotel;
         localStorage.setItem("searchData", JSON.stringify(searchData));
-
+        alert
         window.location.href = "experience.html";
     });
-});
-
-// Load saved data when DOM is ready on experience.html, 
-document.addEventListener("DOMContentLoaded", () => {
-    if (document.getElementById("resultsForm")) {
-        loadSavedData();
-    }
-
-    // Filter experience cards by city
-    const searchData = JSON.parse(localStorage.getItem("searchData"));
-    if (searchData && searchData.city) {
-        const city = searchData.city.toLowerCase();
-
-        document.querySelectorAll(".experience-card").forEach(card => {
-            const cardCity = card.getAttribute("data-city");
-            if (!cardCity || cardCity.toLowerCase() !== city) {
-                card.style.display = "none";
-            } else {
-                card.style.display = "";
-            }
-        });
-    }
 });
 
 // Select an experience via button
@@ -314,3 +432,28 @@ document.querySelectorAll(".experience-card button").forEach(button => {
         window.location.href = "book.html";
     });
 });
+
+function filterMarkersByCity(cityName) {
+    const cityLower = cityName.toLowerCase();
+    allMarkers.forEach(({ marker, type, title, city }) => {
+        if (city && city.toLowerCase() === cityLower) {
+            marker.setMap(map);
+        } else {
+            marker.setMap(null);
+        }
+    });
+}
+
+
+
+// Wait until Google Maps is fully loaded
+if (google?.maps?.importLibrary) {
+    initMap();
+} else {
+    // Fallback: wait for the dynamic loader to finish
+    window.google = window.google || {};
+    window.google.maps = window.google.maps || {};
+    window.google.maps.__ib__ = () => {
+        initMap();
+    };
+}
