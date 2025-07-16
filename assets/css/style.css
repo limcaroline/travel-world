@@ -26,6 +26,12 @@ main {
   flex: 1;
 }
 
+.navbar {
+  color: var(--main-dark-color);
+  font-family: "Lexend Deca", cursive;
+  background-color: var(--alternate-light-color);
+}
+
 /* Hero Section */
 .hero {
   background-image: url("../images/background.webp");
@@ -75,6 +81,7 @@ main {
   background-position: center;
   border-radius: 0.5rem 0.5rem 0 0;
   overflow: hidden;
+  min-height: 300px;
 }
 
 .card-overlay {
@@ -106,7 +113,7 @@ main {
 
 /* Individual card backgrounds */
 .card-bg-1 {
-  background-image: url("../images/background.webp");
+  background-image: url("../images/bg1.webp");
 }
 
 .card-bg-2 {
@@ -122,20 +129,49 @@ main {
 }
 
 .card-bg-5 {
-  background-image: url("../images/bg2.webp");
+  background-image: url("../images/bg5.webp");
 }
 
 .card-bg-6 {
-  background-image: url("../images/bg3.webp");
+  background-image: url("../images/bg6.webp");
 }
 
 .card-bg-7 {
-  background-image: url("../images/bg4.webp");
+  background-image: url("../images/bg7.webp");
 }
 
 .card-bg-8 {
-  background-image: url("../images/bg2.webp");
+  background-image: url("../images/bg8.webp");
 }
+
+.card-bg-9 {
+  background-image: url("../images/bg9.webp");
+}
+
+.card-bg-10 {
+  background-image: url("../images/bg10.webp");
+}
+
+.card-bg-11 {
+  background-image: url("../images/bg11.webp");
+}
+
+.card-bg-12 {
+  background-image: url("../images/bg12.webp");
+}
+
+.card-bg-13 {
+  background-image: url("../images/bg13.webp");
+}
+
+.card-bg-14 {
+  background-image: url("../images/bg14.webp");
+}
+
+.card-bg-15 {
+  background-image: url("../images/bg15.webp");
+}
+
 
 /* Buttons */
 .custom-button {

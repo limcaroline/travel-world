@@ -129,6 +129,10 @@ See Projects page in the travel-world Github repository for complete user storie
 - Font Awesome for icons https://fontawesome.com/
 - Favicon.io for generation of favicons https://favicon.io/
 - Bootstap Version 5.3 for styling/layout https://getbootstrap.com/
+Autoprefixer for CSS versatility https://autoprefixer.github.io/
+The W3C CSS Validation Service to review codes https://www.w3.org/
+Nu Html Checker to review codes https://validator.nu/
+WebAIM: Contrast Checker to verify contrast for color palette https://webaim.org/resources/contrastchecker/
 
 
 
@@ -172,27 +176,51 @@ Run this command: git clone https://github.com/limcaroline/travel-world
 
 
 ### Testing
+Manual testing
+Manually tested the pages for responsiveness, functionality and user experience.
+
+Automated testing
+
+Validate the HTML code for all 3 pages. >> Fixed few errors such as unclosed elements and warnings such as lacking headers. See screenshots for example.
+
+![HTML checker](assets/images/Image 2025-07-16 at 03.28.webp)
+
+Validation testing Note: Also used autoprefixer and CSS validation >> Copy pasted from autofixer for the transition code for social links, similar to what was done in Boardwalk Games which I have followed through this project. All CSS ok.
+![HTML checker](assets/images/Image 2025-07-16 at 03.31.webp)
+![HTML checker](assets/images/Image 2025-07-16 at 03.32.webp)
+![HTML checker](assets/images/Image 2025-07-16 at 03.46.webp)
 
 
 
-### Stretch Goals
 
-
+Use Lighthouse to create automated reports that assess the performance, accessibility and best practices of the pages. I have gotten the results to green particularly on performance by changing the image file types from png/jpg to webp. Also updated the color contrast and put some styling in bold in parts like navigation menu and buttons
 
 ### Future Enhancements
 - Create add-ons page for rental vehicle, insurance, airport shuttle, etc.
-- Add cumulative prices in the summaries
+- Calculate and show cumulative prices in the summaries
 
 
 
 
 ### Credits
 Content
+- I wrote the content with support - see 'Acknowledgments' below.
 
 Media
+- See also Frameworks, Libraries & Programs Used for more references
+- Canva for images
+- Bootstap Version 5.3 for styling/layout
+- Google Fonts for typography
+- Font Awesome for icons
 
 Code
+- Bootstrap for cards and similar, also see comments in VSCode https://getbootstrap.com/
+- Code Institute's modules, including BoardWalk Games and Love Running https://learn.codeinstitute.net/dashboard
+- ChatGPT for helping with debugging, structuring, and ideas https://chatgpt.com/
+- Autoprefixer for code prefix on transition
+
 
 Acknowledgments
-- ChatGPT
-- Bootstrap
+- Big thanks to Code Institute’s team as well as materials and Level 5 Diploma in Web Application Development modules and walkthrough projects, which I have used as references!
+- Special thanks to ChatGPT by OpenAI for assistance in troubleshooting and debugging, as well as support in ideas and structure.
+- Thank you to all the mentioned in this readme and in VScode that was helpful in making this project!

@@ -1,3 +1,6 @@
+/* jshint esversion: 11 */
+/* global google */
+
 // City list
 const cities = ["Stockholm", "Gothenburg", "Malmö"];
 
@@ -395,7 +398,11 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
-});
+    document.getElementById("cityInput").addEventListener("change", () => {
+        const city = document.getElementById("cityInput").value;
+        filterMarkersByCity(city);
+    });
+});    
 
 // Select a hotel via button
 document.querySelectorAll(".hotel-card button").forEach(button => {
@@ -410,7 +417,9 @@ document.querySelectorAll(".hotel-card button").forEach(button => {
         const searchData = JSON.parse(localStorage.getItem("searchData")) || {};
         searchData.selectedHotel = selectedHotel;
         localStorage.setItem("searchData", JSON.stringify(searchData));
-        alert
+        
+        alert(`You selected: ${selectedHotel}. Redirecting to experience page...`);
+
         window.location.href = "experience.html";
     });
 });
@@ -447,13 +456,13 @@ function filterMarkersByCity(cityName) {
 
 
 // Wait until Google Maps is fully loaded
-if (google?.maps?.importLibrary) {
-    initMap();
-} else {
+//if (google?.maps?.importLibrary) {
+  //  initMap();
+//} else {
     // Fallback: wait for the dynamic loader to finish
     window.google = window.google || {};
     window.google.maps = window.google.maps || {};
     window.google.maps.__ib__ = () => {
         initMap();
     };
-}
+//}
